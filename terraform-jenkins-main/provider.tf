@@ -1,4 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 provider "aws" {
-  region                   = "eu-west-1"
-  shared_credentials_files = ["/Users/rahulwagh/.aws/credentials"]
+  region  = "eu-west-1"
+  profile = "default"
 }
